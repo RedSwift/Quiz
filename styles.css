@@ -2,3 +2,37 @@ button {
   height: 70px;
   width: 70px;
 }
+
+html, body{
+  height: 100%;
+  width: 100%;
+  background-image: url("http://blog.derrama.org.pe/wp-content/uploads/2016/02/pizarra.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoreDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 10px 0;
+}
+
+.p2Box {
+  margin-left: 40px;
+}
+
+.answerChoice {
+  margin-left: 10px
+  display: flex;
+}
