@@ -80,8 +80,10 @@ function correctAnswer () {
 function playTurn (choice) {
   if (quiz.isGameOver) return false;
   var correct = false;
-  if (choice === quiz.questions[quiz.currentQuestion].correctChoice) {
+  var playerChoice = parseInt(choice);
+  if (playerChoice === quiz.questions[quiz.currentQuestion].correctChoice) {
     correct = true;
+    console.log('this is running');
     if (quiz.currentQuestion % 2) {
       quiz.player2Points++;
       console.log(quiz.player2Points);
@@ -102,7 +104,10 @@ function updateDisplay () {
   $('.p1Display').html('Player 1 Score: ' + quiz.player1Points);
   $('.p2Display').html('Player 2 Score: ' + quiz.player2Points);
   $('.questionDisplay').html(quiz.questions[quiz.currentQuestion].prompt);
-  
+  $('#0').html(quiz.questions[quiz.currentQuestion].choices[0]);
+  $('#1').html(quiz.questions[quiz.currentQuestion].choices[1]);
+  $('#2').html(quiz.questions[quiz.currentQuestion].choices[2]);
+  $('#3').html(quiz.questions[quiz.currentQuestion].choices[3]);
 }
 
 $(function () {
@@ -111,8 +116,7 @@ $(function () {
     if (isGameOver()) {
       restart();
     } else {
-      var target = index.target.id;
-      playTurn(target);
+      playTurn(index.target.id);
     }
     updateDisplay();
   });
