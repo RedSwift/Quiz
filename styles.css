@@ -1,6 +1,7 @@
 button {
   height: 70px;
   width: 70px;
+  display: inline-flex;
 }
 
 html, body{

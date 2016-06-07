@@ -7,12 +7,12 @@ function Question (prompt, answers, correctAnswerIndex) {
 }
 
 // using the new keyword and the constructor we can create questions for the quiz
-var question1 = new Question('the question', ['answer a', 'answer b', 'answer c', 'answer d'], 0);
-var question2 = new Question('second question', ['answer a', 'answer b', 'answer c', 'answer d'], 1);
-var question3 = new Question('third question', ['answer a', 'answer b', 'answer c', 'answer d'], 2);
-var question4 = new Question('fourth question', ['answer a', 'answer b', 'answer c', 'answer d'], 3);
-var question5 = new Question('fifth question', ['answer a', 'answer b', 'answer c', 'answer d'], 1);
-var question6 = new Question('sixth question', ['answer a', 'answer b', 'answer c', 'answer d'], 2);
+var question1 = new Question('For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.', ['John 3:16', 'Peter 1:3', '1 John 3:16', 'Luke 2:16'], 0);
+var question2 = new Question('Love the Lord your God with all your heart and with all your soul and with all your strength.', ['Matthew 22:37', 'Deuteronomy 6:5', 'Leviticus 19:34', 'Deuteronomy 7:9'], 1);
+var question3 = new Question('Above all else, guard your heart, for everything you do flows from it.', ['Proverbs 24:12', 'Philippians 4:7', 'Proverbs 4:23', 'Psalm 20:12'], 2);
+var question4 = new Question('Your word is a lamp for my feet, a light on my path.', ['Psalm 119:130', 'Psalm 144:6', 'Psalm 90:8', 'Psalm 119:105'], 3);
+var question5 = new Question('Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit,', ['Matthew 26:17', 'Matthew 28:19', 'Mark 14:12', 'John 20:12'], 1);
+var question6 = new Question('Jesus answered, "I am the way and the truth and the life. No one comes to the Father except through me."', ['Luke 13:3', 'Mark 14:4', 'John 14:6', 'Matthew 14:4'], 2);
 
 // we can create an object to represent all of the settings and scores for the quiz
 var quiz = {
