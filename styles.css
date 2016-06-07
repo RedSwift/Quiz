@@ -12,7 +12,6 @@ button {
   justify-content: center;
   align-items: center;
 }
-
 html, body{
   height: 100%;
   width: 100%;
@@ -69,4 +68,10 @@ h2 {
   font-size: 30px;
   color: white;
   padding-top: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+html, body {
+    background-image: url("http://www.publicdomainpictures.net/pictures/110000/velka/chalkboard-or-blackboard.jpg") !important;
+  }
 }
