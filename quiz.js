@@ -83,17 +83,14 @@ function playTurn (choice) {
   var playerChoice = parseInt(choice);
   if (playerChoice === quiz.questions[quiz.currentQuestion].correctChoice) {
     correct = true;
-    console.log('this is running');
     if (quiz.currentQuestion % 2) {
       quiz.player2Points++;
-      console.log(quiz.player2Points);
     } else {
       quiz.player1Points++;
-      console.log(quiz.player1Points);
     }
   }
   quiz.currentQuestion++;
-  if (((quiz.currentQuestion)) === numberOfQuestions()) {
+  if (quiz.currentQuestion === numberOfQuestions()) {
     quiz.isGameOver = true;
   } else {
   }
@@ -101,13 +98,26 @@ function playTurn (choice) {
 }
 
 function updateDisplay () {
-  $('.p1Display').html('Player 1 Score: ' + quiz.player1Points);
-  $('.p2Display').html('Player 2 Score: ' + quiz.player2Points);
-  $('.questionDisplay').html(quiz.questions[quiz.currentQuestion].prompt);
-  $('#0').html(quiz.questions[quiz.currentQuestion].choices[0]);
-  $('#1').html(quiz.questions[quiz.currentQuestion].choices[1]);
-  $('#2').html(quiz.questions[quiz.currentQuestion].choices[2]);
-  $('#3').html(quiz.questions[quiz.currentQuestion].choices[3]);
+  if (quiz.currentQuestion === numberOfQuestions()) {
+    if (whoWon()) {
+      if (whoWon() === 1) {
+        $('.winnerDisplay').html('Player 1 Wins!');
+      } else if (whoWon() === 2) {
+        $('.winnerDisplay').html('Player 2 Wins!');
+      } else if (whoWon() === 3) {
+        $('.winnerDisplay').html('It is a draw!');
+      }
+    }
+  } else {
+    $('.p1Display').html('Player 1 Score: ' + quiz.player1Points);
+    $('.p2Display').html('Player 2 Score: ' + quiz.player2Points);
+    $('.questionDisplay').html(quiz.questions[quiz.currentQuestion].prompt);
+    $('#0').html(quiz.questions[quiz.currentQuestion].choices[0]);
+    $('#1').html(quiz.questions[quiz.currentQuestion].choices[1]);
+    $('#2').html(quiz.questions[quiz.currentQuestion].choices[2]);
+    $('#3').html(quiz.questions[quiz.currentQuestion].choices[3]);
+    $('.winnerDisplay').html('');
+  }
 }
 
 $(function () {

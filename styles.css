@@ -1,7 +1,16 @@
 button {
   height: 70px;
-  width: 70px;
+  width: 100px;
   display: inline-flex;
+  justify-content: center;
+  align-self:center;
+}
+
+.answerChoice {
+  margin-left: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 html, body{
@@ -9,10 +18,11 @@ html, body{
   width: 100%;
   background-image: url("http://blog.derrama.org.pe/wp-content/uploads/2016/02/pizarra.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Oswald', sans-serif;
 }
 
 .container {
@@ -26,14 +36,37 @@ html, body{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0 10px 0;
+  margin: 10px 0 40px 0;
 }
 
 .p2Box {
-  margin-left: 40px;
+  margin-left: 60px;
 }
 
-.answerChoice {
-  margin-left: 10px
+.questionBox {
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+  width: 500px;
+}
+
+h1, h2 {
+  color: white;
+}
+
+h1:first-child {
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+
+.winnerDisplay {
+  font-size: 30px;
+  color: white;
+  padding-top: 10px;
 }
